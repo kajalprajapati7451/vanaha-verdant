@@ -186,7 +186,7 @@
             
             <!-- Amenity 6 -->
             <div class="amenity-item">
-                <img src="https://images.unsplash.com/photo-1543357480-c60d400e7ef6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Tennis Court" loading="lazy">
+                <img src="tennis.webp" alt="Tennis Court" loading="lazy">
             </div>
         </div>
     </div>
@@ -208,7 +208,7 @@
     <!-- Row 2 -->
     <div class="gallery-fullwidth-row">
         <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern Living Room" loading="lazy">
-        <img src="23-10-21_Vanaha SPRINGS FG Opp doc (1) - Copy_page-0003.jpg" alt="Luxury Kitchen" loading="lazy">
+        <img src="copy.jpg" alt="Luxury Kitchen" loading="lazy">
         <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Master Bedroom" loading="lazy">
     </div>
 </section>
@@ -328,34 +328,129 @@
         </form>
     </div>
 </section>
+  <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Vanaha Assistant</h3>
+            <button class="close-chatbot"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages">
+            <div class="chatbot-message">
+                <p>Hello! I'm your Vanaha assistant. How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Type your message...">
+            <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <div class="chatbot-trigger">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <!-- Popup Form HTML -->
+<div class="popup-form" id="popupForm">
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup-content">
+        <button class="close-popup" aria-label="Close form">
+            ✕
+        </button>
+        
+        <div class="popup-header">
+            <img src="https://via.placeholder.com/80x80" alt="Vanaha Verdant Logo" class="popup-logo">
+            <h2>Get Exclusive Details</h2>
+            <p>Fill this form to download our brochure and get pricing details</p>
+        </div>
+        
+        <form id="enquiryForm" class="enquiry-form">
+            <div class="form-group">
+                <input type="text" id="popupName" name="name" required placeholder=" ">
+                <label for="popupName">Full Name*</label>
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" id="popupEmail" name="email" required placeholder=" ">
+                <label for="popupEmail">Email Address*</label>
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="tel" id="popupPhone" name="phone" required placeholder=" " minlength="10" maxlength="15">
+                <label for="popupPhone">Mobile Number*</label>
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <select id="popupInterest" name="interest" required>
+                    <option value="" disabled selected></option>
+                    <option value="2bhk">2 BHK Apartment</option>
+                    <option value="3bhk">3 BHK Apartment</option>
+                    <option value="4bhk">4 BHK Penthouse</option>
+                    <option value="villa">Luxury Villa</option>
+                </select>
+                <label for="popupInterest">I'm Interested In*</label>
+                <span class="error-message"></span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">
+                <span class="btn-text">Get Details Now</span>
+                <span class="loading-spinner"></span>
+            </button>
+            
+            <div class="form-footer">
+                <p>We respect your privacy. Your information is secure with us.</p>
+            </div>
+        </form>
+    </div>
+</div>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                
+                <!-- Brand and QR -->
                 <div class="footer-brand">
                     <h3>Vanaha Verdant</h3>
                     <p>Redefining luxury living with sustainable design</p>
+                    
                     <div class="qr-scanner">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://vanahaverdant.com" alt="Scan for more info">
-                        <p>Scan for more information</p>
+                        <img src="qr.jpg" alt="Payment QR">
+                        <p>Scan to Pay - UPI</p>
                     </div>
                 </div>
-                
+
+                <!-- Newsletter -->
                 <div class="footer-newsletter">
                     <h4>Newsletter</h4>
-                    <p>Subscribe for updates and offers</p>
+                    <p>Get updates</p>
                     <form class="newsletter-form">
                         <input type="email" placeholder="Your Email" required>
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        <button type="submit">Subscribe</button>
                     </form>
                 </div>
+
+                <!-- Bank Account Details -->
+                <div class="footer-bank-details">
+                    <h4>Project Bank Account</h4>
+                    <table>
+                        <tr><td><strong>Account Number:</strong></td><td>108605002946</td></tr>
+                        <tr><td><strong>Account Holder:</strong></td><td>Image Realty LLP</td></tr>
+                        <tr><td><strong>Account Type:</strong></td><td>Current Account</td></tr>
+                        <tr><td><strong>IFSC:</strong></td><td>ICIC0001086</td></tr>
+                        <tr><td><strong>Swift Code:</strong></td><td>ICICINBBCTS</td></tr>
+                        <tr><td><strong>Bank Address:</strong></td><td>248, Andheri Kurla Road, JB Nagar, Andheri East, Mumbai - 400 005.</td></tr>
+                    </table>
+                </div>
+
             </div>
-            
+
             <div class="footer-bottom">
                 <p>&copy; 2023 Vanaha Verdant. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
 
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop">

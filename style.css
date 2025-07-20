@@ -283,8 +283,8 @@ section {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    /* box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05); */
     transition: var(--transition);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -292,8 +292,8 @@ section {
 }
 
 .header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    background:linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); */
     padding: 5px 0;
 }
 
@@ -308,7 +308,7 @@ section {
 .logo {
     font-size: 2.2rem;
     font-weight: 800;
-    color: var(--primary-color);
+    color: #2c3e50; /* Modern dark blue-gray (or use your preferred color) */
     display: flex;
     align-items: center;
     transition: var(--transition);
@@ -316,23 +316,14 @@ section {
 
 .logo:hover {
     transform: scale(1.05);
+    color: #3498db; /* Optional hover color (e.g., blue) */
 }
 
 .logo span {
     margin-left: 8px;
 }
 
-.logo::before {
-    content: '';
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    margin-right: 12px;
-    box-shadow: 0 5px 15px rgba(44, 120, 108, 0.3);
-}
-
+/* Removed the ::before pseudo-element (green dot) */
 .nav-links {
     display: flex;
     list-style: none;
@@ -477,12 +468,12 @@ section {
 .hero {
     height: 100vh;
     min-height: 900px;
-    background: url('23-10-21_Vanaha SPRINGS FG Opp doc (1) - Copy_page-0001.jpg') no-repeat center center/cover;
+    background: url('vanaha\ verdant.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    color: blue;
+    color: white;
     position: relative;
     overflow: hidden;
     background-attachment: fixed;
@@ -523,13 +514,13 @@ section {
     left: 0;
     width: 80px;
     height: 4px;
-    background: blue;
+    background: var(--dark-color);
     border-radius: 2px;
 }
 
 /* Brand Name Styling */
 .brand-name span {
-    color: darkblue;
+    color:yellow;
     position: relative;
 }
 
@@ -544,6 +535,7 @@ section {
     margin-bottom: 2.5rem;
     opacity: 0.9;
     max-width: 500px;
+    color: black;
     margin-left: 0;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     line-height: 1.6;
@@ -1635,7 +1627,7 @@ section {
 /* Back to Top Button - Moved Higher */
 .back-to-top {
     position: fixed;
-    bottom: 150px; /* Changed from 40px to 100px */
+    bottom: 200px; /* Changed from 40px to 100px */
     right: 40px;
     width: 70px;
     height: 70px;
