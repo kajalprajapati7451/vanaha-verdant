@@ -348,59 +348,48 @@
         <i class="fas fa-robot"></i>
     </div>
 
-    <!-- Popup Form HTML -->
-<div class="popup-form" id="popupForm">
-    <div class="popup-overlay" id="popupOverlay"></div>
-    <div class="popup-content">
-        <button class="close-popup" aria-label="Close form">
-            ✕
-        </button>
+   <div class="vanaha-popup" id="vanahaPopup">
+    <div class="popup-overlay"></div>
+    <div class="popup-box">
+        <button class="close-btn">×</button>
         
         <div class="popup-header">
-            <img src="https://via.placeholder.com/80x80" alt="Vanaha Verdant Logo" class="popup-logo">
-            <h2>Get Exclusive Details</h2>
-            <p>Fill this form to download our brochure and get pricing details</p>
+            <img src="https://example.com/vanaha-logo.png" alt="Vanaha Verdant Logo" class="logo">
+            <h3>Experience Verdant Living</h3>
+            <p class="subtitle">Get details about our eco-friendly residences</p>
         </div>
         
-        <form id="enquiryForm" class="enquiry-form">
-            <div class="form-group">
-                <input type="text" id="popupName" name="name" required placeholder=" ">
-                <label for="popupName">Full Name*</label>
-                <span class="error-message"></span>
+        <form class="vanaha-form">
+            <div class="input-group">
+                <input type="text" placeholder=" " required>
+                <label>Full Name*</label>
             </div>
             
-            <div class="form-group">
-                <input type="email" id="popupEmail" name="email" required placeholder=" ">
-                <label for="popupEmail">Email Address*</label>
-                <span class="error-message"></span>
+            <div class="input-group">
+                <input type="email" placeholder=" " required>
+                <label>Email Address*</label>
             </div>
             
-            <div class="form-group">
-                <input type="tel" id="popupPhone" name="phone" required placeholder=" " minlength="10" maxlength="15">
-                <label for="popupPhone">Mobile Number*</label>
-                <span class="error-message"></span>
+            <div class="input-group">
+                <input type="tel" placeholder=" " required>
+                <label>Mobile Number*</label>
             </div>
             
-            <div class="form-group">
-                <select id="popupInterest" name="interest" required>
+            <div class="input-group">
+                <select required>
                     <option value="" disabled selected></option>
-                    <option value="2bhk">2 BHK Apartment</option>
-                    <option value="3bhk">3 BHK Apartment</option>
-                    <option value="4bhk">4 BHK Penthouse</option>
-                    <option value="villa">Luxury Villa</option>
+                    <option value="2bhk">2 BHK Garden Residences</option>
+                    <option value="3bhk">3 BHK Forest View Homes</option>
+                    <option value="penthouse">Eco Penthouse</option>
                 </select>
-                <label for="popupInterest">I'm Interested In*</label>
-                <span class="error-message"></span>
+                <label>Preferred Residence*</label>
             </div>
             
-            <button type="submit" class="btn btn-primary">
-                <span class="btn-text">Get Details Now</span>
-                <span class="loading-spinner"></span>
+            <button type="submit" class="submit-btn">
+                <span>Get Brochure</span>
             </button>
             
-            <div class="form-footer">
-                <p>We respect your privacy. Your information is secure with us.</p>
-            </div>
+            <p class="disclaimer">By submitting, you agree to our <a href="#">Privacy Policy</a></p>
         </form>
     </div>
 </div>

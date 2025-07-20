@@ -361,3 +361,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+// Show popup when page loads
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('vanahaPopup').style.display = 'flex';
+    }, 1000); // Show after 1 second delay
+});
+
+// Close functionality
+document.querySelector('.close-btn').addEventListener('click', function() {
+    document.getElementById('vanahaPopup').style.display = 'none';
+});
+
+document.querySelector('.popup-overlay').addEventListener('click', function() {
+    document.getElementById('vanahaPopup').style.display = 'none';
+});
+
+// Form submission
+document.querySelector('.vanaha-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Validate form
+    let isValid = true;
+    document.querySelectorAll('.vanaha-form input, .vanaha-form select').forEach(el => {
+        if (!el.value.trim()) isValid = false;
+    });
+    
+    if (isValid) {
+        // Here you would typically send data to server
+        alert('Thank you for your interest in Vanaha Verdant! Our team will contact you shortly.');
+        document.getElementById('vanahaPopup').style.display = 'none';
+    } else {
+        alert('Please fill all required fields');
+    }
+});
