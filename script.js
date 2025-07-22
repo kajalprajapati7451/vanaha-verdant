@@ -395,3 +395,58 @@ document.querySelector('.vanaha-form').addEventListener('submit', function(e) {
         alert('Please fill all required fields');
     }
 });
+emailjs.init('YOUR_USER_ID');
+emailjs.send("service_brg4zsl","template_cqfjh2r");
+document.addEventListener('DOMContentLoaded', function() {
+        const popup = document.getElementById('vanahaPopup');
+        const closeBtn = document.querySelector('.close-btn');
+        
+        // Show popup after slight delay
+        setTimeout(() => {
+            popup.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }, 1000);
+        
+        // Close functionality
+        closeBtn.addEventListener('click', closePopup);
+        document.querySelector('.popup-overlay').addEventListener('click', closePopup);
+        
+        function closePopup() {
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+        
+        // Close with ESC key
+        document.addEventListener('keydown', function(e) {
+            if(e.key === 'Escape') closePopup();
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+  // Get all view details buttons
+  const viewButtons = document.querySelectorAll('.view-details-btn');
+  const formContainer = document.getElementById('vanahaForm');
+  const closeButton = document.querySelector('.close-form-btn');
+  const selectedPlanSpan = document.getElementById('selectedPlan');
+  
+  // Add click event to each button
+  viewButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Get the plan name from data attribute
+      const planName = this.getAttribute('data-plan');
+      selectedPlanSpan.textContent = planName;
+      
+      // Show the form
+      formContainer.style.display = 'flex';
+    });
+  });
+  
+  // Close form when close button is clicked
+  closeButton.addEventListener('click', function() {
+    formContainer.style.display = 'none';
+  });
+  
+  // Close form when overlay is clicked
+  document.querySelector('.form-overlay').addEventListener('click', function() {
+    formContainer.style.display = 'none';
+  });
+});
