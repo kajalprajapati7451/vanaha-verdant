@@ -748,7 +748,7 @@ section {
 .about .container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     position: relative;
     z-index: 2;
 }
@@ -758,7 +758,7 @@ section {
     background-color: #ffffff;
     border-left: 3px solid #2e8b57;
     padding: 10px 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.4;
     color: #333;
@@ -796,17 +796,20 @@ section {
 }
 
 /* About Image */
+/* Modified About Image with Downward Adjustment */
 .about-image {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transform: perspective(800px) rotateY(-10deg);
+    transform: perspective(800px) rotateY(-10deg) translateY(15px); /* Added translateY */
     transition: all 0.5s ease;
     border: 5px solid #fff;
+    margin-bottom: 20px; /* Increased from 5px */
+    margin-top: 150px; /* Added to push it down */
 }
 
 .about-image:hover {
-    transform: perspective(800px) rotateY(0deg);
+    transform: perspective(800px) rotateY(0deg) translateY(15px); /* Maintains Y position */
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
@@ -815,6 +818,10 @@ section {
     height: auto;
     display: block;
     transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
 }
 
 .about-image:hover img {
@@ -873,7 +880,7 @@ section {
     .about .container {
         flex-direction: row;
         align-items: center;
-        gap: 50px;
+        gap: 30px;
     }
     
     .about-content {
@@ -898,7 +905,7 @@ section {
 /* Mobile Optimization */
 @media (max-width: 768px) {
     .about {
-        padding: 40px 0;
+        padding: 20px 0;
     }
     
     .about::before {
@@ -1630,6 +1637,151 @@ section {
     padding: 30px 20px;
     /* ... all other card styles remain unchanged ... */
 } 
+/* Reset Margins and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Section Styling */
+.sheets-section {
+    padding: 80px 20px;
+    background: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+/* Cards Container */
+.sheets-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Card Styling */
+.sheet-box {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.sheet-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Card Header */
+.sheet-box h3 {
+    padding: 25px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+/* Color Variations */
+.payment-plan-bg h3 {
+    background: #3498db; /* Blue */
+}
+
+.cost-sheet-bg h3 {
+    background: #2ecc71; /* Green */
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.sheet-box:hover .image-container img {
+    transform: scale(1.05);
+}
+
+/* Overlay Effects */
+.enquire-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sheet-box:hover .enquire-overlay {
+    opacity: 1;
+}
+
+.enquire-btn {
+    padding: 12px 30px;
+    background: white;
+    color: #2c3e50;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.enquire-btn:hover {
+    background: #f1f1f1;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sheets-container {
+        flex-direction: column;
+    }
+    
+    .sheet-box {
+        max-width: 100%;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+}
 /* Floor Plans Section */
 .floor-plans-section {
   padding: 5rem 0;
@@ -2037,7 +2189,64 @@ section {
     height: 2px; /* Very thin accent */
     background: var(--gradient-primary);
 }
+/* QR Code Styling - Perfectly Scaled */
+.qr-scanner {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    width: 200px; /* Optimal desktop size */
+    margin: 0 auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(0,0,0,0.1);
+    text-align: center; /* Centers any caption */
+}
 
+.qr-scanner:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.qr-scanner img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1; /* Ensures perfect square */
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #f5f5f5;
+    background: white; /* Fallback for transparent QR */
+}
+
+/* Optional QR Caption */
+.qr-caption {
+    display: block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Responsive Scaling */
+@media (max-width: 992px) {
+    .qr-scanner {
+        width: 180px; /* Slightly smaller for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .qr-scanner {
+        width: 160px; /* Perfect mobile size */
+        padding: 18px;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-scanner {
+        width: 140px; /* Minimum readable size */
+        padding: 15px;
+    }
+}
 .footer-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2180,6 +2389,116 @@ section {
     .bank-info {
         padding: 6px;
     }
+}
+/* QR Code Styling - Premium Compact Version */
+.qr-scanner {
+    background: white;
+    padding: 12px; /* Slightly tighter padding */
+    border-radius: 12px;
+    width: 160px; /* Optimal compact size */
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.08);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* QR Code Inner Glow Effect */
+.qr-scanner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.qr-scanner:hover {
+    transform: translateY(-3px) scale(1.02); /* Subtler hover */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.qr-scanner:hover::before {
+    opacity: 0.6; /* Soft glow on hover */
+}
+
+.qr-scanner img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    background: white;
+    position: relative; /* For z-index */
+}
+
+/* QR Code Frame Decoration */
+.qr-scanner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+}
+
+.qr-scanner:hover::after {
+    border-color: rgba(0,0,0,0.1); /* Subtle border animation */
+}
+
+/* QR Caption Styling */
+.qr-caption {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Scaling */
+@media (max-width: 992px) {
+    .qr-scanner {
+        width: 150px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .qr-scanner {
+        width: 140px;
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+    .qr-caption {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-scanner {
+        width: 130px;
+        padding: 6px;
+    }
+}
+
+/* Special Cases */
+.qr-scanner.dark-version {
+    background: #222;
+    border-color: #444;
+}
+.qr-scanner.dark-version img {
+    border-color: #333;
+}
+.qr-scanner.dark-version .qr-caption {
+    color: #aaa;
 }
 
 /* Back to Top Button - Moved Higher */
@@ -3765,7 +4084,7 @@ section {
 }
 /* Other Sections with Reduced Space */
 .hero, .about, .contact, .map-section {
-  padding: 30px 0; /* Consistent tight padding */
+  padding: 20px 0; /* Consistent tight padding */
 }
 
 /* Ensure all sections have minimal vertical rhythm */
@@ -3786,4 +4105,88 @@ section {
 /* Buttons with Tight Padding */
 .btn {
   padding: 8px 15px; /* Compact buttons */
+}
+/* Mobile Section Spacing Adjustments */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 30px 0; /* Reduced from 80px/120px */
+  }
+  
+  section {
+    padding: 25px 0; /* Even tighter control */
+  }
+  
+  .section-header {
+    margin-bottom: 15px; /* Reduced from 40-80px */
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px; /* Tight spacing */
+  }
+  
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Specific section adjustments */
+  .hero {
+    padding: 20px 0;
+    min-height: 70vh; /* Reduced from 90vh */
+  }
+  
+  .about, .contact, .map-section, .floor-plans-section {
+    padding: 25px 0;
+  }
+  
+  .features-gallery-fullwidth, .fullwidth-amenities-section {
+    padding: 30px 0;
+  }
+  
+  /* Reduce space between components */
+  .about-stats, .location-details, .floor-plans-grid {
+    margin-top: 20px;
+  }
+  
+  /* Tighten card spacing */
+  .card, .plan-card, .amenity-item {
+    margin-bottom: 15px;
+  }
+}
+
+/* Extra small devices (phones < 576px) */
+@media (max-width: 576px) {
+  :root {
+    --section-padding: 20px 0;
+  }
+  
+  section {
+    padding: 20px 0;
+  }
+  
+  .hero {
+    min-height: 60vh;
+    padding: 15px 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  /* Remove any remaining large margins */
+  .container > * {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  /* Ultra-compact cards */
+  .card, .plan-card {
+    padding: 12px;
+  }
 }
