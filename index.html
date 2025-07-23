@@ -357,7 +357,7 @@ galleryItems.forEach((item, index) => {
           <p>Spacious living with private garden terrace</p>
           <div class="plan-cta">
             <button class="btn view-details-btn" data-plan="2 BHK Garden Residence">View Details</button>
-            <a href="#" class="download-link"><i class="fas fa-download"></i> PDF</a>
+            <!-- <a href="#" class="download-link"><i class="fas fa-download"></i> PDF</a> -->
           </div>
         </div>
       </div>
@@ -383,7 +383,7 @@ galleryItems.forEach((item, index) => {
           <p>Panoramic forest views with large balconies</p>
           <div class="plan-cta">
             <button class="btn view-details-btn" data-plan="3 BHK Forest View">View Details</button>
-            <a href="#" class="download-link"><i class="fas fa-download"></i> PDF</a>
+            <!-- <a href="#" class="download-link"><i class="fas fa-download"></i> PDF</a> -->
           </div>
         </div>
       </div>
@@ -530,12 +530,13 @@ galleryItems.forEach((item, index) => {
 <!-- EmailJS Script -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-  emailjs.init("-2kiL8F-KiriITneI"); // ✅ Your Public Key
+  emailjs.init("vBwIrpYRCJh13Wl7j"); // ✅ Your Public Key
 
   document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    emailjs.sendForm("service_zpst5pr", "template_53ttdr8", this)
+    emailjs.send("service_4ed9xm2","template_f1ycawq",{
+email: "kajalprajapati7451@gmail.com",})
       .then(function () {
         document.getElementById("status-msg").innerText = "✅ Email sent successfully!";
       }, function (error) {
