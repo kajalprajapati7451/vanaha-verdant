@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -26,7 +30,24 @@
     <header class="header">
         <div class="container">
             <nav class="navbar">
-               <a href="#" class="sp-logo">Shapoorji Pallonji</a>
+         <div class="sp-mixgradient-logo">
+  <a href="https://www.shapoorjipallonji.com" class="logo-link" target="_blank">
+    
+    <!-- SP Icon Image Styled Like an SVG Icon -->
+    <div class="logo-icon">
+      <img src="images.png" alt="SP Icon">
+    </div>
+
+    <!-- Gradient Text -->
+    <div class="logo-text">
+      <span class="logo-name">SHAPOORJI PALLONJI</span>
+    </div>
+
+  </a>
+</div>
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+
 
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Home</a></li>
@@ -260,16 +281,16 @@ galleryItems.forEach((item, index) => {
     
     <!-- Row 1 -->
     <div class="gallery-fullwidth-row">
-        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern Villa" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Luxury Apartment" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Countryside Mansion" loading="lazy">
+        <img src="2 bhk1.jpeg" alt="Modern Villa" loading="lazy">
+        <img src="2 bhk 2.jpg" alt="Luxury Apartment" loading="lazy">
+        <img src="2bhk 3.jpeg" alt="Countryside Mansion" loading="lazy">
     </div>
     
     <!-- Row 2 -->
     <div class="gallery-fullwidth-row">
-        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern Living Room" loading="lazy">
-        <img src="copy.jpg" alt="Luxury Kitchen" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Master Bedroom" loading="lazy">
+        <img src="3 bhk 4.jpeg" alt="Modern Living Room" loading="lazy">
+        <img src="3 bhk 3.jpeg" alt="Luxury Kitchen" loading="lazy">
+        <img src="3 bhk 2.webp" alt="Master Bedroom" loading="lazy">
     </div>
 </section>
 
@@ -344,7 +365,7 @@ galleryItems.forEach((item, index) => {
       <!-- 3 BHK Plan -->
       <div class="plan-card">
         <div class="plan-image">
-          <img src="3bhk.jpg" alt="3 BHK Forest View">
+          <img src="3 bhk.jpg" alt="3 BHK Forest View">
           <div class="plan-badge">Popular</div>
         </div>
         <div class="plan-details">
@@ -509,12 +530,12 @@ galleryItems.forEach((item, index) => {
 <!-- EmailJS Script -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-  emailjs.init("wp_Rv7XLUXVv84co6"); // ✅ Your Public Key
+  emailjs.init("-2kiL8F-KiriITneI"); // ✅ Your Public Key
 
   document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    emailjs.sendForm("service_brg4zsl", "template_cqfjh2r", this)
+    emailjs.sendForm("service_zpst5pr", "template_53ttdr8", this)
       .then(function () {
         document.getElementById("status-msg").innerText = "✅ Email sent successfully!";
       }, function (error) {
